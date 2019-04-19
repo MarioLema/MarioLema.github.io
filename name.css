@@ -44,15 +44,12 @@
   .animation-container{
       opacity: 0.8;
   }
-  .svg-container {
-	width: 100%;
-	max-width: 100rem;
-	margin: auto;
-}
-  
   .svg-object {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    max-width: 85rem;
+    margin: auto;
+    display: inherit;
   }
   
   #rectangle-container {
