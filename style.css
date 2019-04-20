@@ -74,7 +74,7 @@ border-bottom: solid #002d3b 1px ;
 	margin: auto;
 	font-size: 1.1rem;
 	text-align: center;
-	transform: translateY(-20rem);
+	transform: translateY(-18rem);
 }
 .projects-section {
 	text-align: center;
@@ -186,7 +186,7 @@ border-bottom: solid #002d3b 1px ;
 }
 
 .page-link:hover {
-	background: #002d3b;
+	background: #002d3bd6;
 	color: #fffdf5;
 }
 .page-link i {
@@ -209,11 +209,13 @@ border-bottom: solid #002d3b 1px ;
 	opacity: 0.2;
 }
 .header-container h1 {
-	font-size: 3.4rem;
+	font-size: 3rem;
 	width: 100%;
 	border-bottom: solid 1px;
-	padding: 1rem 5rem;
-	border-top: solid 1px;
+	padding: 1rem 3rem;
+	position: relative;
+	color: #335760;
+	text-align: center;
 }
 
 .js-projects {
@@ -252,10 +254,10 @@ border-bottom: solid #002d3b 1px ;
 .projects-grid {
 	display: grid;
 	width: 80rem;
-	height: 185rem;
+	height: 160rem;
 	margin: auto;
 	grid-template-columns: repeat(3,1fr);
-	grid-template-rows: repeat(8, 1fr);
+	grid-template-rows: repeat(7, 1fr);
 }
 .p-title {
 	background: #002d3be0;
@@ -278,4 +280,44 @@ border-bottom: solid #002d3b 1px ;
 }
 #life-card, #ultimate-card, #core-correct-card, #countries-card, #linux-mint-card{
 	grid-column: span 2;
+}
+.contact-section{
+	padding: 10rem 0;
+}
+form {
+	height: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30rem;
+	margin: 10rem auto;
+}
+form div {
+	display: flex;
+	flex-direction: column;
+}
+form input {
+	width: 60%;
+	height: 2rem;
+	border: solid #002d3b 1px;
+	padding: 1rem;
+}
+textarea{
+	border: solid #002d3b 1px;
+	padding: 1rem;
+}
+form label {
+	line-height: 2rem;
+}
+.submit-button{
+		padding: 1rem;
+		margin: 2rem auto;
+		border: solid 1px;
+		background: none;
+		transition: all 500ms;
+		cursor: pointer;
+}
+.submit-button:hover{
+	background: #002d3b;
+	color: #fffdf5;
 }
