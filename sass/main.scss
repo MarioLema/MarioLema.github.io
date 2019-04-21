@@ -1,3 +1,28 @@
+// @import "abstracts/_functions";
+@import "abstracts/_mixins";
+@import "abstracts/_variables";
+
+@import "base/_base";
+@import "base/_animations";
+@import "base/_typography";
+// @import "base/_utilities";
+
+@import "pages/_home";
+
+
+@import "components/_button";
+@import "components/_composition";
+@import "components/_feature-box";
+@import "components/_cards";
+@import "components/_story";
+@import "components/_bg-video";
+@import "components/_form";
+
+
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_navigation";
+
 *,
 *::after,
 *::before {
@@ -17,7 +42,7 @@ body {
 	opacity: 0.3;
 	width: 100vw;
 	height: 100vh;
-	background: url(images/Untitled-6.png);
+	background: url(../images/untitled-6-reverted.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -319,3 +344,4 @@ form label {
 	background: #002d3b;
 	color: #fffdf5;
 }
+
