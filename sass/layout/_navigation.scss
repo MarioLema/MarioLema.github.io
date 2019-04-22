@@ -1,0 +1,36 @@
+nav {
+	position: fixed;
+	width: 100%;
+	font-size: 0.9rem;
+	z-index: 1000;
+	background: #fffdf530;
+}
+nav div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 90rem;
+	margin: auto;
+}
+nav img {
+	margin: 0.5rem;
+	height: 3.5rem;
+	width: 3.5rem;
+	opacity: 0.7;
+}
+nav ul {
+	display: flex;
+	list-style: none;
+    padding: 1rem 0;
+}
+nav ul li{
+	margin: 0 1rem;
+    padding: 0.5rem 0.4rem;
+    transition: border-bottom 500ms;
+	border-bottom: solid #002d3b00 1px;
+	cursor: pointer;
+}
+nav ul li:hover{
+border-bottom: solid #002d3b 1px ;
+}

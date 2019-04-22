@@ -1,0 +1,23 @@
+.social-bar {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2000;
+    right: 0;
+    
+    & a {
+        color: #002d3b;
+        margin: 1rem;
+        font-size: 1.4rem;
+        opacity: 0.6;
+        transition: all 200ms;
+
+        &:hover{
+            opacity:1;
+            color: #ffd940;
+        }
+    }
+
+}

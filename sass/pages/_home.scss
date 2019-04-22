@@ -1,0 +1,34 @@
+.projects-section {
+	text-align: center;
+}
+.header-container {
+	width: max-content;
+	margin: auto;
+	position: relative;
+	margin-bottom: 5rem;
+}
+.header-container h1 {
+	font-size: 3rem;
+	width: 100%;
+	border-bottom: solid 1px;
+	padding: 1rem 3rem;
+	position: relative;
+	color: #335760;
+	text-align: center;
+}
+.projects-grid {
+	display: grid;
+	width: 81rem;
+	height: 194rem;
+	margin: auto;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(7, 1fr);
+}
+.contact-section{
+	padding: 10rem 0;
+}
+.contact-section p{
+	text-align: center;
+	max-width: 50rem;
+	margin: auto;
+}

@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+	background:$WhiteY;
+	color: $Blue;
+	// font-family: 'Raleway', sans-serif;
+	font-family: 'Julius Sans One', sans-serif;
+}
+.img-bg {
+	position: fixed;
+	z-index: -200000000;
+	opacity: 0.3;
+	width: 100vw;
+	height: 100vh;
+	background: url(../images/untitled-6-reverted.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}

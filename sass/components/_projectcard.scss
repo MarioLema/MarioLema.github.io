@@ -1,0 +1,111 @@
+#life-card,
+#pomodoro-card,
+#core-correct-card,
+#countries-card,
+#linux-mint-card {
+	grid-column: span 2;
+}
+
+.project-card {
+	background: #002d3b;
+	position: relative;
+	overflow: hidden;
+	margin: 0.5rem;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.47);
+
+	&:hover img {
+		transform: scale(1.6);
+		filter: contrast(110%) saturate(110%) blur(10px);
+	}
+
+	&:hover .project-text {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	&:hover .project-links {
+		transform: translateY(0rem);
+	}
+
+	&:hover .page-link {
+		margin: 0;
+	}
+}
+
+.project-card img {
+	width: 100%;
+	transition: all 700ms;
+	object-fit: cover;
+	height: 100%;
+	object-position: top;
+	filter: contrast(110%) saturate(110%);
+}
+
+.project-card h2 {
+	padding: 1.5rem;
+	border-bottom: solid 1px;
+}
+
+.project-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #ffd940;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	align-items: center;
+	justify-content: space-around;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: all 500ms;
+}
+
+.project-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 500ms;
+	width: 100%;
+
+	& span {
+		background: #002d3b;
+		width: 1px;
+		height: 100%;
+		transform: skewX(-37deg);
+	}
+}
+
+.page-link {
+	color: #002d3b;
+	text-decoration: none;
+	background: none;
+	width: 10rem;
+	padding: 1rem 0;
+	font-size: 1rem;
+	cursor: pointer;
+	border: solid 1px #002d3b;
+	transition: all 1000ms;
+
+	&:first-of-type {
+		clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+		margin-right: -1rem;
+	}
+	
+	&:last-of-type {
+		clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+		margin-left: -1rem;
+	}
+	
+	&:hover {
+		background: #002d3bd6;
+		color: #fffdf5;
+	}
+	
+	& i {
+		margin-right: 1rem;
+	}
+}
+

@@ -1,0 +1,40 @@
+form {
+	height: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30rem;
+	margin: 10rem auto;
+}
+form div {
+	display: flex;
+	flex-direction: column;
+}
+form input {
+	width: 60%;
+	height: 2rem;
+	border: solid #002d3b 1px;
+	padding: 1rem;
+	background: #fff9;
+}
+textarea{
+	border: solid #002d3b 1px;
+	padding: 1rem;
+	background: #fff9;
+}
+form label {
+	line-height: 2rem;
+}
+.submit-button{
+		padding: 1rem;
+		margin: 2rem auto;
+		border: solid 1px;
+		background: none;
+		transition: all 500ms;
+        cursor: pointer;
+        
+        &:hover{
+            background: #002d3b;
+            color: #fffdf5;
+        }
+}
