@@ -7,7 +7,7 @@
 }
 
 .project-card {
-	background: #002d3b;
+	background: $Blue;
 	position: relative;
 	overflow: hidden;
 	margin: 0.5rem;
@@ -43,7 +43,7 @@
 
 .project-card h2 {
 	padding: 1.5rem;
-	border-bottom: solid 1px;
+	border-bottom: $BlueBorder;
 }
 
 .project-text {
@@ -71,7 +71,7 @@
 	width: 100%;
 
 	& span {
-		background: #002d3b;
+		background: $Blue;
 		width: 1px;
 		height: 100%;
 		transform: skewX(-37deg);
@@ -79,14 +79,14 @@
 }
 
 .page-link {
-	color: #002d3b;
+	color: $Blue;
 	text-decoration: none;
 	background: none;
 	width: 10rem;
 	padding: 1rem 0;
 	font-size: 1rem;
 	cursor: pointer;
-	border: solid 1px #002d3b;
+	border: $BlueBorder;
 	transition: all 1000ms;
 
 	&:first-of-type {
@@ -100,8 +100,8 @@
 	}
 	
 	&:hover {
-		background: #002d3bd6;
-		color: #fffdf5;
+		background: $Blue;
+		color: $WhiteY;
 	}
 	
 	& i {

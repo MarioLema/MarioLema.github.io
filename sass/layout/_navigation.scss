@@ -28,9 +28,9 @@ nav ul li{
 	margin: 0 1rem;
     padding: 0.5rem 0.4rem;
     transition: border-bottom 500ms;
-	border-bottom: solid #002d3b00 1px;
+	border-bottom: solid transparent 1px;
 	cursor: pointer;
 }
 nav ul li:hover{
-border-bottom: solid #002d3b 1px ;
+border-bottom: $BlueBorder ;
 }

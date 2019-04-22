@@ -13,12 +13,12 @@ form div {
 form input {
 	width: 60%;
 	height: 2rem;
-	border: solid #002d3b 1px;
+	border: $BlueBorder;
 	padding: 1rem;
 	background: #fff9;
 }
 textarea{
-	border: solid #002d3b 1px;
+	border: $BlueBorder;
 	padding: 1rem;
 	background: #fff9;
 }
@@ -28,13 +28,13 @@ form label {
 .submit-button{
 		padding: 1rem;
 		margin: 2rem auto;
-		border: solid 1px;
+		border: $BlueBorder;
 		background: none;
 		transition: all 500ms;
         cursor: pointer;
         
         &:hover{
-            background: #002d3b;
-            color: #fffdf5;
+            background: $Blue;
+            color: $WhiteY;
         }
 }

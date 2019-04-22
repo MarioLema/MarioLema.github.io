@@ -13,12 +13,20 @@ body {
 .img-bg {
   position: fixed;
   z-index: -200000000;
-  opacity: 0.3;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   background: url(../images/untitled-6-reverted.png);
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  animation-name: appear;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; }
+
+@keyframes appear {
+  100% {
+    opacity: 0.3; } }
 
 /*ANIMATION CLASSES*/
 .animated-item {
@@ -422,7 +430,7 @@ body {
 .header-container h1 {
   font-size: 3rem;
   width: 100%;
-  border-bottom: solid 1px;
+  border-bottom: solid #002d3b 1px;
   padding: 1rem 3rem;
   position: relative;
   color: #335760;
@@ -478,7 +486,7 @@ body {
 
 .project-card h2 {
   padding: 1.5rem;
-  border-bottom: solid 1px; }
+  border-bottom: solid #002d3b 1px; }
 
 .project-text {
   position: absolute;
@@ -516,7 +524,7 @@ body {
   padding: 1rem 0;
   font-size: 1rem;
   cursor: pointer;
-  border: solid 1px #002d3b;
+  border: solid #002d3b 1px;
   transition: all 1000ms; }
   .page-link:first-of-type {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
@@ -525,7 +533,7 @@ body {
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
     margin-left: -1rem; }
   .page-link:hover {
-    background: #002d3bd6;
+    background: #002d3b;
     color: #fffdf5; }
   .page-link i {
     margin-right: 1rem; }
@@ -560,7 +568,7 @@ form label {
 .submit-button {
   padding: 1rem;
   margin: 2rem auto;
-  border: solid 1px;
+  border: solid #002d3b 1px;
   background: none;
   transition: all 500ms;
   cursor: pointer; }
@@ -623,7 +631,7 @@ nav ul li {
   margin: 0 1rem;
   padding: 0.5rem 0.4rem;
   transition: border-bottom 500ms;
-  border-bottom: solid #002d3b00 1px;
+  border-bottom: solid transparent 1px;
   cursor: pointer; }
 
 nav ul li:hover {
