@@ -52,3 +52,11 @@
 @mixin Grid{
     @supports (display: grid) or (display: -ms-grid){  @content };
 }
+
+@mixin browser($browsers) {
+    @each $browser in $browsers {
+      html[data-browser*="#{$browser}"] & {
+        @content;
+      }
+    }
+  }
