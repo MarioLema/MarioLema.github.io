@@ -49,6 +49,6 @@
 
 
 //NO GRID SUPPORT
-@mixin noGrid{
-    @supports not( (display: grid) or (display: -ms-grid)){ &{@content} };
+@mixin Grid{
+    @supports (display: grid) or (display: -ms-grid){  @content };
 }

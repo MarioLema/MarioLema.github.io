@@ -28,12 +28,21 @@
 }
 
 .projects-grid {
-	display: grid;
 	width: 81rem;
-	height: 194rem;
 	margin: auto;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(7, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include Grid{
+		&{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(7, 1fr);
+			height: 194rem;
+		}
+
+	}
 
 	@include responsive(desktop) {
 				width: 70rem;
@@ -54,11 +63,6 @@
 	}
 
 
-	@include noGrid{
-			display: flex;
-			flex-wrap: wrap;
-			height: auto;
-	}
 }
 
 .contact-section {

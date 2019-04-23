@@ -21,7 +21,7 @@ form input {
 	border: $BlueBorder;
 	padding: 1rem;
 	background: #fff9;
-
+display: block;
 	@include responsive(xtrasmall){
 		width: 100%;
 	}
@@ -30,14 +30,15 @@ textarea{
 	border: $BlueBorder;
 	padding: 1rem;
 	background: #fff9;
-
+	display: block;
 	@include responsive(xtrasmall){
 			width: 100%;
 	}
 }
 form label {
 	line-height: 2rem;
-	text-align: initial;
+	text-align: left;
+	display: block;
 }
 .submit-button{
 		padding: 1rem;
