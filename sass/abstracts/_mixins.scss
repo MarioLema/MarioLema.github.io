@@ -35,9 +35,20 @@
             &{ @content }
         };
     }
+    @if $size == tv{
+        @media screen and (min-width: 95rem){ 
+            &{ @content }
+        };
+    }
 }
 
 // NO HOVER SUPPORT
 @mixin noHover{
     @media (hover: none) { @content};
+}
+
+
+//NO GRID SUPPORT
+@mixin noGrid{
+    @supports not( (display: grid) or (display: -ms-grid)){ &{@content} };
 }

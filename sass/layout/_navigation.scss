@@ -29,15 +29,19 @@ nav img {
 				width: 4rem;
 	}
 	@include responsive(xtrasmall){
-			height: 3rem;
-			width: 3rem;
+			height: 2rem;
+			width: 2rem;
 	}
 }
 
 nav ul {
 	display: flex;
 	list-style: none;
-    padding: 1rem 0;
+	padding: 1rem 0;
+	
+	@include responsive(xtrasmall){
+		padding: 0.5rem 0;
+	}
 }
 .page-reachers{
 	margin: 0 1rem;
@@ -47,7 +51,8 @@ nav ul {
 	cursor: pointer;
 
 	@include responsive(xtrasmall){
-	font-size: 0.6rem;
+			font-size: 0.4rem;
+			padding: 0;
 	}
 
 	&:hover{

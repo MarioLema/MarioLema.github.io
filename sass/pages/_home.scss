@@ -18,6 +18,13 @@
 	color: #335760;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
+
+	@include responsive(large){
+		font-size: 2rem;
+	}
+	@include responsive(xtrasmall){
+			font-size: 1rem;
+	}
 }
 
 .projects-grid {
@@ -43,7 +50,14 @@
 			height: auto;
 	}
 	@include responsive(small){
-			width: 100%;
+			max-width: 100%;
+	}
+
+
+	@include noGrid{
+			display: flex;
+			flex-wrap: wrap;
+			height: auto;
 	}
 }
 
@@ -56,4 +70,5 @@
 	text-align: center;
 	max-width: 50rem;
 	margin: auto;
+	padding: 0 2rem;
 }
