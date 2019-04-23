@@ -5,6 +5,10 @@ form {
 	justify-content: space-around;
 	width: 30rem;
 	margin: 10rem auto;
+
+	@include responsive(xtrasmall){
+			margin: 10rem 1rem;
+	}
 }
 form div {
 	display: flex;
@@ -21,9 +25,14 @@ textarea{
 	border: $BlueBorder;
 	padding: 1rem;
 	background: #fff9;
+
+	@include responsive(xtrasmall){
+			width: 60%;
+	}
 }
 form label {
 	line-height: 2rem;
+	text-align: initial;
 }
 .submit-button{
 		padding: 1rem;

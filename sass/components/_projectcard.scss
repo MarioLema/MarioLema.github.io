@@ -13,7 +13,7 @@
 	margin: 0.5rem;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.47);
 
-	&:hover img {
+	&:hover .card-img {
 		transform: scale(1.6);
 		filter: contrast(110%) saturate(110%) blur(10px);
 	}
@@ -29,6 +29,32 @@
 
 	&:hover .page-link {
 		margin: 0;
+	}
+
+	@include responsive(medium){
+				height: 24rem;
+	}
+}
+@include noHover{
+
+	.active-card {
+		& .card-img {
+			transform: scale(1.6);
+			filter: contrast(110%) saturate(110%) blur(10px);
+		}
+	
+		& .project-text {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	
+		& .project-links {
+			transform: translateY(0rem);
+		}
+	
+		& .page-link {
+			margin: 0;
+		}
 	}
 }
 
@@ -61,6 +87,10 @@
 	opacity: 0;
 	transform: translateY(100%);
 	transition: all 500ms;
+
+	@include responsive(desktop){
+			font-size: 0.8rem;
+	}
 }
 
 .project-links {
@@ -70,12 +100,16 @@
 	transition: all 500ms;
 	width: 100%;
 
-	& span {
-		background: $Blue;
-		width: 1px;
-		height: 100%;
-		transform: skewX(-37deg);
-	}
+
+	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+		
+		& span {
+			background: $Blue;
+			width: 1px;
+			height: 100%;
+			transform: skewX(-37deg);
+		}
+	  }
 }
 
 .page-link {
@@ -90,15 +124,30 @@
 	transition: all 1000ms;
 
 	&:first-of-type {
-		clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 		margin-right: -1rem;
 	}
 	
 	&:last-of-type {
-		clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 		margin-left: -1rem;
 	}
-	
+	@include responsive(desktop){
+			width: 6rem;
+			padding: 0.5rem 0;
+			font-size: 0.8rem;
+	}
+
+	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+		
+		&:first-of-type {
+			clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+		}
+		
+		&:last-of-type {
+			clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+		}
+	  }
+
+
 	&:hover {
 		background: $Blue;
 		color: $WhiteY;

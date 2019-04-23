@@ -1,7 +1,43 @@
+.header-section{
+height: 100vh;
+
+@include responsive(medium){
+		height: auto;
+}
+}
+.name-img {
+	width: 55%;
+	position: absolute;
+	opacity: 0.8;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 50rem;
+}
 .about-container {
 	max-width: 50rem;
 	margin: auto;
 	font-size: 1.3rem;
 	text-align: center;
 	transform: translateY(-18rem);
+
+
+	@include responsive(large){
+			transform: translateY(-12rem);
+	}
+	@include responsive(medium){
+			transform: translateY(-8rem);
+			font-size: 1rem;
+			max-width: 30rem;
+	}
+	@include responsive(small){
+				transform: translateY(-6rem);
+				font-size: 0.9rem;
+				max-width: 25rem;
+	}
+	@include responsive(xtrasmall){
+			transform: translateY(-3rem);
+			font-size: 0.9rem;
+			max-width: 17rem;
+	}
 }

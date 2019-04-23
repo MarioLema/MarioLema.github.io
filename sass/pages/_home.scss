@@ -1,12 +1,14 @@
 .projects-section {
 	text-align: center;
 }
+
 .header-container {
-	width: max-content;
 	margin: auto;
 	position: relative;
 	margin-bottom: 5rem;
+	display: inline-block;
 }
+
 .header-container h1 {
 	font-size: 3rem;
 	width: 100%;
@@ -17,18 +19,40 @@
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 }
+
 .projects-grid {
 	display: grid;
 	width: 81rem;
 	height: 194rem;
 	margin: auto;
-	grid-template-columns: repeat(3,1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(7, 1fr);
+
+	@include responsive(desktop) {
+				width: 70rem;
+				height: 163rem;
+	}
+	@include responsive(large) {
+			width: 56rem;
+			height: 130rem;
+	}
+	@include responsive(medium){
+			width: 42rem;
+			display: flex;
+			flex-direction: column;
+			height: auto;
+	}
+	@include responsive(small){
+			width: 100%;
+	}
 }
-.contact-section{
+
+.contact-section {
 	padding: 10rem 0;
+	text-align: center;
 }
-.contact-section p{
+
+.contact-section p {
 	text-align: center;
 	max-width: 50rem;
 	margin: auto;

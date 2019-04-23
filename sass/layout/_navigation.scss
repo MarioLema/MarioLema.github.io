@@ -9,32 +9,52 @@ nav div {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: end;
+	justify-content: space-between;
 	max-width: 90rem;
 	margin: auto;
 }
 nav img {
-	height: 6.5rem;
-	width: 6.5rem;
+	height: 6rem;
+	width: 6rem;
 	opacity: 0.7;
 	border-radius: 0 0 10rem 0;
 	margin: 0.5rem 0 0 0.5rem;
-	position: absolute;
-	top: 0;
-	left: 0;
+
+	@include responsive(desktop){
+			height: 5rem;
+			width: 5rem;
+	}
+	@include responsive(medium){
+				height: 4rem;
+				width: 4rem;
+	}
+	@include responsive(xtrasmall){
+			height: 3rem;
+			width: 3rem;
+	}
 }
+
 nav ul {
 	display: flex;
 	list-style: none;
     padding: 1rem 0;
 }
-nav ul li{
+.page-reachers{
 	margin: 0 1rem;
     padding: 0.5rem 0.4rem;
     transition: border-bottom 500ms;
 	border-bottom: solid transparent 1px;
 	cursor: pointer;
+
+	@include responsive(xtrasmall){
+	font-size: 0.6rem;
+	}
+
+	&:hover{
+		border-bottom: $BlueBorder ;
+		}
 }
-nav ul li:hover{
-border-bottom: $BlueBorder ;
+.page-reachers a {
+	text-decoration: inherit;
+	color: inherit;
 }

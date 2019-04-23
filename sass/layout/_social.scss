@@ -20,4 +20,12 @@
         }
     }
 
+    @include responsive(small){
+            flex-direction: row;
+            position: initial;
+            top: initial;
+            transform: none;
+            justify-content: center;
+    }
+
 }

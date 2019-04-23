@@ -422,10 +422,10 @@ body {
   text-align: center; }
 
 .header-container {
-  width: max-content;
   margin: auto;
   position: relative;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  display: inline-block; }
 
 .header-container h1 {
   font-size: 3rem;
@@ -444,9 +444,27 @@ body {
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(7, 1fr); }
+  @media screen and (max-width: 87.5rem) {
+    .projects-grid {
+      width: 70rem;
+      height: 163rem; } }
+  @media screen and (max-width: 75rem) {
+    .projects-grid {
+      width: 56rem;
+      height: 130rem; } }
+  @media screen and (max-width: 62rem) {
+    .projects-grid {
+      width: 42rem;
+      display: flex;
+      flex-direction: column;
+      height: auto; } }
+  @media screen and (max-width: 48rem) {
+    .projects-grid {
+      width: 100%; } }
 
 .contact-section {
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  text-align: center; }
 
 .contact-section p {
   text-align: center;
@@ -466,7 +484,7 @@ body {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.47); }
-  .project-card:hover img {
+  .project-card:hover .card-img {
     transform: scale(1.6);
     filter: contrast(110%) saturate(110%) blur(10px); }
   .project-card:hover .project-text {
@@ -476,6 +494,21 @@ body {
     transform: translateY(0rem); }
   .project-card:hover .page-link {
     margin: 0; }
+  @media screen and (max-width: 62rem) {
+    .project-card {
+      height: 24rem; } }
+
+@media (hover: none) {
+  .active-card .card-img {
+    transform: scale(1.6);
+    filter: contrast(110%) saturate(110%) blur(10px); }
+  .active-card .project-text {
+    opacity: 1;
+    transform: translateY(0%); }
+  .active-card .project-links {
+    transform: translateY(0rem); }
+  .active-card .page-link {
+    margin: 0; } }
 
 .project-card img {
   width: 100%;
@@ -504,6 +537,9 @@ body {
   opacity: 0;
   transform: translateY(100%);
   transition: all 500ms; }
+  @media screen and (max-width: 87.5rem) {
+    .project-text {
+      font-size: 0.8rem; } }
 
 .project-links {
   display: flex;
@@ -511,11 +547,12 @@ body {
   justify-content: center;
   transition: all 500ms;
   width: 100%; }
-  .project-links span {
-    background: #002d3b;
-    width: 1px;
-    height: 100%;
-    transform: skewX(-37deg); }
+  @supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+    .project-links span {
+      background: #002d3b;
+      width: 1px;
+      height: 100%;
+      transform: skewX(-37deg); } }
 
 .page-link {
   color: #002d3b;
@@ -528,11 +565,19 @@ body {
   border: solid #002d3b 1px;
   transition: all 1000ms; }
   .page-link:first-of-type {
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
     margin-right: -1rem; }
   .page-link:last-of-type {
-    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
     margin-left: -1rem; }
+  @media screen and (max-width: 87.5rem) {
+    .page-link {
+      width: 6rem;
+      padding: 0.5rem 0;
+      font-size: 0.8rem; } }
+  @supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+    .page-link:first-of-type {
+      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%); }
+    .page-link:last-of-type {
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); } }
   .page-link:hover {
     background: #002d3b;
     color: #fffdf5; }
@@ -546,6 +591,9 @@ form {
   justify-content: space-around;
   width: 30rem;
   margin: 10rem auto; }
+  @media screen and (max-width: 36rem) {
+    form {
+      margin: 10rem 1rem; } }
 
 form div {
   display: flex;
@@ -562,9 +610,13 @@ textarea {
   border: solid #002d3b 1px;
   padding: 1rem;
   background: #fff9; }
+  @media screen and (max-width: 36rem) {
+    textarea {
+      width: 60%; } }
 
 form label {
-  line-height: 2rem; }
+  line-height: 2rem;
+  text-align: initial; }
 
 .submit-button {
   padding: 1rem;
@@ -577,12 +629,45 @@ form label {
     background: #002d3b;
     color: #fffdf5; }
 
+.header-section {
+  height: 100vh; }
+  @media screen and (max-width: 62rem) {
+    .header-section {
+      height: auto; } }
+
+.name-img {
+  width: 55%;
+  position: absolute;
+  opacity: 0.8;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50rem; }
+
 .about-container {
   max-width: 50rem;
   margin: auto;
   font-size: 1.3rem;
   text-align: center;
   transform: translateY(-18rem); }
+  @media screen and (max-width: 75rem) {
+    .about-container {
+      transform: translateY(-12rem); } }
+  @media screen and (max-width: 62rem) {
+    .about-container {
+      transform: translateY(-8rem);
+      font-size: 1rem;
+      max-width: 30rem; } }
+  @media screen and (max-width: 48rem) {
+    .about-container {
+      transform: translateY(-6rem);
+      font-size: 0.9rem;
+      max-width: 25rem; } }
+  @media screen and (max-width: 36rem) {
+    .about-container {
+      transform: translateY(-3rem);
+      font-size: 0.9rem;
+      max-width: 17rem; } }
 
 .social-bar {
   display: flex;
@@ -601,6 +686,13 @@ form label {
     .social-bar a:hover {
       opacity: 1;
       color: #ffd940; }
+  @media screen and (max-width: 48rem) {
+    .social-bar {
+      flex-direction: row;
+      position: initial;
+      top: initial;
+      transform: none;
+      justify-content: center; } }
 
 nav {
   position: fixed;
@@ -613,31 +705,46 @@ nav div {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   max-width: 90rem;
   margin: auto; }
 
 nav img {
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 6rem;
+  width: 6rem;
   opacity: 0.7;
   border-radius: 0 0 10rem 0;
-  margin: 0.5rem 0 0 0.5rem;
-  position: absolute;
-  top: 0;
-  left: 0; }
+  margin: 0.5rem 0 0 0.5rem; }
+  @media screen and (max-width: 87.5rem) {
+    nav img {
+      height: 5rem;
+      width: 5rem; } }
+  @media screen and (max-width: 62rem) {
+    nav img {
+      height: 4rem;
+      width: 4rem; } }
+  @media screen and (max-width: 36rem) {
+    nav img {
+      height: 3rem;
+      width: 3rem; } }
 
 nav ul {
   display: flex;
   list-style: none;
   padding: 1rem 0; }
 
-nav ul li {
+.page-reachers {
   margin: 0 1rem;
   padding: 0.5rem 0.4rem;
   transition: border-bottom 500ms;
   border-bottom: solid transparent 1px;
   cursor: pointer; }
+  @media screen and (max-width: 36rem) {
+    .page-reachers {
+      font-size: 0.6rem; } }
+  .page-reachers:hover {
+    border-bottom: solid #002d3b 1px; }
 
-nav ul li:hover {
-  border-bottom: solid #002d3b 1px; }
+.page-reachers a {
+  text-decoration: inherit;
+  color: inherit; }
