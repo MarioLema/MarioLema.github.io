@@ -7,9 +7,15 @@ nav {
 
 nav div {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	max-width: 140rem;
 	margin: auto;
 }
@@ -36,6 +42,8 @@ nav img {
 }
 
 nav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 	padding: 1rem 0;
@@ -49,6 +57,7 @@ nav ul {
 .page-reachers {
 	margin: 0 1rem;
 	padding: 0.5rem 0.4rem;
+	-webkit-transition: border-bottom 500ms;
 	transition: border-bottom 500ms;
 	border-bottom: solid transparent 1px;
 	cursor: pointer;

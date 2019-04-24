@@ -31,8 +31,11 @@
 .projects-grid {
 	width: 81rem;
 	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 
 	@include Grid {
 		& {
@@ -56,8 +59,13 @@
 
 	@include responsive(medium) {
 		width: 42rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		height: auto;
 	}
 

@@ -12,6 +12,8 @@
 	overflow: hidden;
 	margin: 0.5rem auto;
 
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.47);
+
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.47);
 	width: 33rem;
 	height: 25rem;
@@ -23,21 +25,25 @@
 		}
 	}
 
-	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
+	@supports ((display: flex) or (display: -ms-flexbox)) {
 		margin: 0.5rem;
 	}
-	
+
 	&:hover .card-img {
+		-webkit-transform: scale(1.6);
 		transform: scale(1.6);
+		-webkit-filter: saturate(90%) blur(10px);
 		filter: saturate(90%) blur(10px);
 	}
 
 	&:hover .project-text {
 		opacity: 1;
+		-webkit-transform: translateY(0%);
 		transform: translateY(0%);
 	}
 
 	&:hover .project-links {
+		-webkit-transform: translateY(0rem);
 		transform: translateY(0rem);
 	}
 
@@ -56,16 +62,20 @@
 
 	.active-card {
 		& .card-img {
+			-webkit-transform: scale(1.6);
 			transform: scale(1.6);
+			-webkit-filter: contrast(110%) saturate(110%) blur(10px);
 			filter: contrast(110%) saturate(110%) blur(10px);
 		}
 
 		& .project-text {
 			opacity: 1;
+			-webkit-transform: translateY(0%);
 			transform: translateY(0%);
 		}
 
 		& .project-links {
+			-webkit-transform: translateY(0rem);
 			transform: translateY(0rem);
 		}
 
@@ -77,12 +87,16 @@
 
 .project-card img {
 	width: 100%;
+	-webkit-transition: all 700ms;
 	transition: all 700ms;
+	-webkit-filter: saturate(90%);
 	filter: saturate(90%);
 
-	@supports (object-fit: cover) {
+	@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+		-o-object-fit: cover;
 		object-fit: cover;
 		height: 100%;
+		-o-object-position: top;
 		object-position: top;
 	}
 }
@@ -99,13 +113,23 @@
 	background: $SecondaryBlue;
 	top: 0;
 	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 1rem;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	opacity: 0;
+	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
+	-webkit-transition: all 500ms;
 	transition: all 500ms;
 
 	@include responsive(desktop) {
@@ -117,31 +141,39 @@
 	max-width: 100%;
 	margin: 2rem auto;
 
-	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
+	@supports ((display: flex) or (display: -ms-flexbox)) {
 		margin: auto;
 	}
 }
 
 .project-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-transition: all 500ms;
 	transition: all 500ms;
 	width: 100%;
 	margin: 2rem auto;
 
 
-	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+	@supports ((-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%))) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
 
 		& span {
 			background: $PrimaryWhite;
 			width: 1px;
 			height: 100%;
+			-webkit-transform: skewX(-37deg);
 			transform: skewX(-37deg);
 		}
 	}
 
-	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
+	@supports ((display: flex) or (display: -ms-flexbox)) {
 		margin: auto;
 	}
 }
@@ -155,6 +187,7 @@
 	font-size: 1rem;
 	cursor: pointer;
 	border: $PrimaryWhiteBorder;
+	-webkit-transition: all 1000ms;
 	transition: all 1000ms;
 
 	&:first-of-type {
@@ -171,13 +204,15 @@
 		font-size: 0.8rem;
 	}
 
-	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
+	@supports ((-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%))) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
 
 		&:first-of-type {
+			-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 			clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 		}
 
 		&:last-of-type {
+			-webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 			clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}

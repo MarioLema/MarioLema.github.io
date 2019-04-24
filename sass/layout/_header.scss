@@ -8,7 +8,8 @@
 	opacity: 0.8;
 	top: 40%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	max-width: 50rem;
 }
 
@@ -17,27 +18,32 @@
 	margin: auto;
 	font-size: 1.3rem;
 	text-align: center;
-	transform: translateY(-18rem);
+	-webkit-transform: translateY(-18rem);
+	        transform: translateY(-18rem);
 	padding: 1rem;
 
 	@include responsive(large) {
-		transform: translateY(-12rem);
+		-webkit-transform: translateY(-12rem);
+		        transform: translateY(-12rem);
 	}
 
 	@include responsive(medium) {
-		transform: translateY(-8rem);
+		-webkit-transform: translateY(-8rem);
+		        transform: translateY(-8rem);
 		font-size: 1rem;
 		max-width: 30rem;
 	}
 
 	@include responsive(small) {
-		transform: translateY(-6rem);
+		-webkit-transform: translateY(-6rem);
+		        transform: translateY(-6rem);
 		font-size: 0.9rem;
 		max-width: 25rem;
 	}
 
 	@include responsive(xtrasmall) {
-		transform: translateY(-3rem);
+		-webkit-transform: translateY(-3rem);
+		        transform: translateY(-3rem);
 		font-size: 0.7rem;
 		max-width: 17rem;
 	}

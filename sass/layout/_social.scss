@@ -1,9 +1,15 @@
 .social-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 2000;
     right: 0;
 
@@ -13,6 +19,7 @@
         margin: 1rem;
         font-size: 1.4rem;
         opacity: 0.6;
+        -webkit-transition: all 200ms;
         transition: all 200ms;
 
         &:hover {
@@ -27,11 +34,17 @@
     }
 
     @include responsive(small) {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         position: initial;
         top: initial;
-        transform: none;
-        justify-content: center;
+        -webkit-transform: none;
+                transform: none;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
 }
