@@ -1,96 +1,102 @@
 /*ANIMATION CLASSES*/
 .animated-item {
-    fill: $Blue;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
+  fill: $Blue;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
-  }
-  /*CONTAINERS*/
-  .animation-container{
-      opacity: 0.7;
-  }
-  .svg-object {
-    width: 100%;
-    height: auto;
-    max-width: 85rem;
-    margin: auto;
-    display: inherit;
-    min-height: 49rem;
-    overflow: hidden;
+}
 
-    @include responsive(desktop){
-      min-height: 43rem;
-    }
-    @include responsive(large){
-      min-height: 36rem;
-    }
-    @include responsive(medium){
-      min-height: 27rem;
-    }
-    @include responsive(small){
-      min-height: 20rem;
-    }
-    @include responsive(xtrasmall){
-      min-height: 13rem;
-    }
+/*CONTAINERS*/
+.animation-container {
+  opacity: 0.7;
+}
+
+.svg-object {
+  width: 100%;
+  height: auto;
+  max-width: 85rem;
+  margin: auto;
+  display: inherit;
+  min-height: 49rem;
+  overflow: hidden;
+
+  @include responsive(desktop) {
+    min-height: 43rem;
   }
-  
-  #rectangle-container {
-    fill: none;
+
+  @include responsive(large) {
+    min-height: 36rem;
   }
-  
-  #l3c1 {
-    fill: none;
-    fill-opacity: 1;
-    fill-rule: evenodd;
-    stroke: $Blue;
-    stroke-width: 0.2809875;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
+
+  @include responsive(medium) {
+    min-height: 27rem;
   }
-  
-  #l3c2 {
-    fill: none;
-    fill-opacity: 1;
-    fill-rule: evenodd;
-    stroke: $Blue;
-    stroke-width: 0.2809875;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
+
+  @include responsive(small) {
+    min-height: 20rem;
   }
-  
-  #l5c1 {
-    fill: none;
-    fill-opacity: 1;
-    fill-rule: evenodd;
-    stroke: $Blue;
-    stroke-width: 0.2809875;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
+
+  @include responsive(xtrasmall) {
+    min-height: 13rem;
   }
-  
-  #l5c2 {
-    fill: none;
-    fill-opacity: 1;
-    fill-rule: evenodd;
-    stroke: $Blue;
-    stroke-width: 0.28835812;
-    stroke-linecap: butt;
-    stroke-linejoin: miter;
-    stroke-miterlimit: 4;
-    stroke-dasharray: none;
-    stroke-dashoffset: 0;
-    stroke-opacity: 1;
-  }
+}
+
+#rectangle-container {
+  fill: none;
+}
+
+#l3c1 {
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: $Blue;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+
+#l3c2 {
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: $Blue;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+
+#l5c1 {
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: $Blue;
+  stroke-width: 0.2809875;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}
+
+#l5c2 {
+  fill: none;
+  fill-opacity: 1;
+  fill-rule: evenodd;
+  stroke: $Blue;
+  stroke-width: 0.28835812;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  stroke-opacity: 1;
+}

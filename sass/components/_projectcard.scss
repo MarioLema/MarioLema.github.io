@@ -16,18 +16,20 @@
 	width: 33rem;
 	height: 25rem;
 
-	@include Grid{
-		&{
+	@include Grid {
+		& {
 			width: initial;
 			height: initial;
 		}
 	}
-	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)){
+
+	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
 		margin: 0.5rem;
 	}
+	
 	&:hover .card-img {
 		transform: scale(1.6);
-		filter: contrast(110%) saturate(110%) blur(10px);
+		filter: saturate(90%) blur(10px);
 	}
 
 	&:hover .project-text {
@@ -43,29 +45,30 @@
 		margin: 0.1rem;
 	}
 
-	@include responsive(medium){
-				height: 24rem;
+	@include responsive(medium) {
+		height: 24rem;
 	}
 
 
 }
-@include noHover{
+
+@include noHover {
 
 	.active-card {
 		& .card-img {
 			transform: scale(1.6);
 			filter: contrast(110%) saturate(110%) blur(10px);
 		}
-	
+
 		& .project-text {
 			opacity: 1;
 			transform: translateY(0%);
 		}
-	
+
 		& .project-links {
 			transform: translateY(0rem);
 		}
-	
+
 		& .page-link {
 			margin: 0.1rem;
 		}
@@ -75,9 +78,9 @@
 .project-card img {
 	width: 100%;
 	transition: all 700ms;
-	filter: contrast(110%) saturate(110%);
+	filter: saturate(90%);
 
-	@supports (object-fit: cover){
+	@supports (object-fit: cover) {
 		object-fit: cover;
 		height: 100%;
 		object-position: top;
@@ -93,7 +96,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #ffd940;
+	background: $SecondaryBlue;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -105,15 +108,16 @@
 	transform: translateY(100%);
 	transition: all 500ms;
 
-	@include responsive(desktop){
-			font-size: 0.8rem;
+	@include responsive(desktop) {
+		font-size: 0.8rem;
 	}
 }
-.project-text p{
+
+.project-text p {
 	max-width: 100%;
 	margin: 2rem auto;
 
-	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)){
+	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
 		margin: auto;
 	}
 }
@@ -128,16 +132,16 @@
 
 
 	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
-		
+
 		& span {
 			background: $Blue;
 			width: 1px;
 			height: 100%;
 			transform: skewX(-37deg);
 		}
-	  }
+	}
 
-	  @supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)){
+	@supports ((display: flex) or (display: -webkit-box) or (display: -ms-flexbox)) {
 		margin: auto;
 	}
 }
@@ -156,39 +160,39 @@
 	&:first-of-type {
 		margin-right: -1rem;
 	}
-	
+
 	&:last-of-type {
 		margin-left: -1rem;
 	}
-	@include responsive(desktop){
-			width: 6rem;
-			padding: 0.5rem 0;
-			font-size: 0.8rem;
+
+	@include responsive(desktop) {
+		width: 6rem;
+		padding: 0.5rem 0;
+		font-size: 0.8rem;
 	}
 
 	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
-		
+
 		&:first-of-type {
 			clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 		}
-		
+
 		&:last-of-type {
 			clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 		}
-	  }
+	}
 
 
 	&:hover {
 		background: $Blue;
 		color: $WhiteY;
 	}
-	
+
 	& i {
 		margin-right: 1rem;
 
-		@include responsive(small){
-				margin-right: .2rem;
+		@include responsive(small) {
+			margin-right: .2rem;
 		}
 	}
 }
-

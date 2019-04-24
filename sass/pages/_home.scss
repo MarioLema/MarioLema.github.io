@@ -15,15 +15,16 @@
 	border-bottom: $BlueBorder;
 	padding: 1rem 3rem;
 	position: relative;
-	color: #335760;
+	color: $Blue;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 
-	@include responsive(large){
+	@include responsive(large) {
 		font-size: 2rem;
 	}
-	@include responsive(xtrasmall){
-			font-size: 1rem;
+
+	@include responsive(xtrasmall) {
+		font-size: 1rem;
 	}
 }
 
@@ -32,10 +33,9 @@
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 
-	@include Grid{
-		&{
+	@include Grid {
+		& {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(7, 1fr);
@@ -45,21 +45,24 @@
 	}
 
 	@include responsive(desktop) {
-				width: 70rem;
-				height: 163rem;
+		width: 70rem;
+		height: 163rem;
 	}
+
 	@include responsive(large) {
-			width: 56rem;
-			height: 130rem;
+		width: 56rem;
+		height: 130rem;
 	}
-	@include responsive(medium){
-			width: 42rem;
-			display: flex;
-			flex-direction: column;
-			height: auto;
+
+	@include responsive(medium) {
+		width: 42rem;
+		display: flex;
+		flex-direction: column;
+		height: auto;
 	}
-	@include responsive(small){
-			max-width: 100%;
+
+	@include responsive(small) {
+		max-width: 100%;
 	}
 
 

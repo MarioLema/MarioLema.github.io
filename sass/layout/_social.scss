@@ -1,12 +1,12 @@
 .social-bar {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000;
     right: 0;
-    
+
     & a {
         display: block;
         color: $Blue;
@@ -15,23 +15,23 @@
         opacity: 0.6;
         transition: all 200ms;
 
-        &:hover{
-            opacity:1;
+        &:hover {
+            opacity: 1;
             color: #ffd940;
         }
 
-        @include responsive(xtrasmall){
-                margin: 0.5rem;
-                font-size: 1rem;
+        @include responsive(xtrasmall) {
+            margin: 0.5rem;
+            font-size: 1rem;
         }
     }
 
-    @include responsive(small){
-            flex-direction: row;
-            position: initial;
-            top: initial;
-            transform: none;
-            justify-content: center;
+    @include responsive(small) {
+        flex-direction: row;
+        position: initial;
+        top: initial;
+        transform: none;
+        justify-content: center;
     }
 
 }

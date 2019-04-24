@@ -6,50 +6,66 @@ form {
 	width: 30rem;
 	margin: 10rem auto;
 
-	@include responsive(xtrasmall){
-			width: 100%;
-			padding: 1rem;
+	@include responsive(xtrasmall) {
+		width: 100%;
+		padding: 1rem;
 	}
 }
+
 form div {
 	display: flex;
 	flex-direction: column;
 }
+
 form input {
 	width: 60%;
 	height: 2rem;
-	border: $BlueBorder;
-	padding: 1rem;
-	background: #fff9;
-display: block;
-	@include responsive(xtrasmall){
+	border: none;
+	padding: 1.2rem;
+	background: #c3c3c382;
+	display: block;
+	border-radius: 5px;
+	margin: 0.5rem 0;
+	color: white;
+
+
+	@include responsive(xtrasmall) {
 		width: 100%;
 	}
 }
-textarea{
-	border: $BlueBorder;
+
+textarea {
+	border: none;
 	padding: 1rem;
-	background: #fff9;
+	background: #c3c3c382;
 	display: block;
-	@include responsive(xtrasmall){
-			width: 100%;
+	margin: 0.5rem 0;
+	color: white;
+	border-radius: 5px;
+
+	@include responsive(xtrasmall) {
+		width: 100%;
 	}
 }
+
 form label {
 	line-height: 2rem;
 	text-align: left;
 	display: block;
 }
-.submit-button{
-		padding: 1rem;
-		margin: 2rem auto;
-		border: $BlueBorder;
-		background: none;
-		transition: all 500ms;
-        cursor: pointer;
-        
-        &:hover{
-            background: $Blue;
-            color: $WhiteY;
-        }
+
+.submit-button {
+	padding: 1rem;
+	margin: 2rem auto;
+	border: $BlueBorder;
+	background: none;
+	transition: all 500ms;
+	cursor: pointer;
+	color: $Blue;
+	border-radius: 10px;
+
+	&:hover {
+		background: $Blue;
+		color: $WhiteY;
+	}
 }
