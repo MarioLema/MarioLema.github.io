@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mario Lema Portfolio</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +33,6 @@
 
     </nav>
     <section class="header-section" id="header-section">
-        <!-- <img src="images/name.png" class="name-img" alt=""> -->
         <div class="animation-container">
             <div class="svg-container">
                 <svg class="svg-object" xmlns="http://www.w3.org/2000/svg" width="848.72314mm" height="493.42255mm"
@@ -145,7 +151,7 @@
                     <circle class="animated-item opacity-object" id="l3c1" r="16.490803" cy="226.72902"
                         cx="322.72241" />
                     <circle class="animated-item opacity-object" id="l5c2" r="14.494658" cy="232.07845" cx="396.8436" />
-                    <!-- {/* ------- */} -->
+                    <!-- DIAGONAL LINES -->
                     <path class="animated-item diagonal-line" id="l1d4"
                         d="m 241.27485,258.14132 -0.35003,0.13972 -40.6698,-55.64976 0.28004,-0.21024 z" />
                     <path class="animated-item diagonal-line" id="l1d3"
@@ -203,7 +209,8 @@
         </div>
         <div class="about-container">
             <p>Hi! I'm Mario, a Front End Developer working with
-                Javascript, React.js and CSS3 technologies. Passionate about building bespoke websites, making custom animations and
+                Javascript, React.js and CSS3 technologies. Passionate about building bespoke websites, making custom
+                animations and
                 working with SVGs. Always looking for exciting code to write.</p>
         </div>
     </section>
@@ -469,8 +476,7 @@
             </div>
             <div id="message-field">
                 <label for="textarea">Message</label>
-                <textarea rows="8" cols="50" id="textarea" name="textarea" type="text"
-                    placeholder="Your message..."></textarea>
+                <textarea rows="8" cols="50" id="textarea" name="textarea" placeholder="Your message..."></textarea>
             </div>
             <div id="submit-button">
                 <button class="submit-button" name="button1id">SUBMIT</button>
@@ -478,14 +484,32 @@
         </form>
     </section>
     <div class="social-bar">
-            <a href="https://github.com/MarioLema" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:lema_mario@yahoo.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://twitter.com/Mario_lema8" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/mario-lema-221036a3/" target="_blank"><i
-                    class="fab fa-linkedin-in"></i></a>
-            <a href="https://codepen.io/Ubim28/#" target="_blank"><i class="fab fa-codepen"></i></a>
-        </div>
-    <script src="main.js"></script>
+        <a href="https://github.com/MarioLema" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:lema_mario@yahoo.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://twitter.com/Mario_lema8" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/mario-lema-221036a3/" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://codepen.io/Ubim28/#" target="_blank"><i class="fab fa-codepen"></i></a>
+    </div>
+
+
+    <script src="animation.js"></script>
+    <script>
+      function addListeners(){
+        let cards = document.querySelectorAll('.project-card');
+        cards.forEach( function(card){
+            card.addEventListener( 'click', function(event){
+                let currentCard = event.target.closest('.project-card');
+                if(!currentCard.classList.contains('active-card')){
+                    currentCard.classList.add('active-card');
+                }else{
+                    currentCard.classList.remove('active-card');
+                }
+            });
+        });
+    };
+addListeners();</script>
+
 </body>
 
 </html>

@@ -9,10 +9,6 @@ body {
 	background:$WhiteY;
 	color: $Blue;
 	font-family: 'Julius Sans One', sans-serif;
-
-	@include browser(Firefox/66){
-		background: blue;
-	}
 }
 .img-bg {
 	position: fixed;
