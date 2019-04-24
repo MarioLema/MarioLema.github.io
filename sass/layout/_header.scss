@@ -1,13 +1,5 @@
 .header-section {
-	height: 100vh;
-
-	@include responsive(medium) {
-		height: auto;
-	}
-
-	@include responsive(tv) {
-		height: auto;
-	}
+	height: auto;
 }
 
 .name-img {

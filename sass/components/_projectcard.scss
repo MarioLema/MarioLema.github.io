@@ -89,7 +89,7 @@
 
 .project-card h2 {
 	padding: 1.5rem;
-	border-bottom: $BlueBorder;
+	border-bottom: $PrimaryWhiteBorder;
 }
 
 .project-text {
@@ -134,7 +134,7 @@
 	@supports (clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)) {
 
 		& span {
-			background: $Blue;
+			background: $PrimaryWhite;
 			width: 1px;
 			height: 100%;
 			transform: skewX(-37deg);
@@ -147,14 +147,14 @@
 }
 
 .page-link {
-	color: $Blue;
+	color: $PrimaryWhite;
 	text-decoration: none;
 	background: none;
 	width: 10rem;
 	padding: 1rem 0.2rem;
 	font-size: 1rem;
 	cursor: pointer;
-	border: $BlueBorder;
+	border: $PrimaryWhiteBorder;
 	transition: all 1000ms;
 
 	&:first-of-type {
@@ -184,8 +184,8 @@
 
 
 	&:hover {
-		background: $Blue;
-		color: $WhiteY;
+		background: $PrimaryWhite;
+		color: $PrimaryBlue;
 	}
 
 	& i {

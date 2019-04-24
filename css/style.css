@@ -362,9 +362,9 @@ textarea {
       width: 100%; } }
 
 form label {
-  line-height: 2rem;
   text-align: left;
-  display: block; }
+  display: block;
+  margin: 1rem 0; }
 
 .submit-button {
   padding: 1rem;
@@ -374,19 +374,15 @@ form label {
   transition: all 500ms;
   cursor: pointer;
   color: #FFEFCE;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 5rem;
+  height: 3rem; }
   .submit-button:hover {
     background: #FFEFCE;
     color: #000d11; }
 
 .header-section {
-  height: 100vh; }
-  @media screen and (max-width: 62rem) {
-    .header-section {
-      height: auto; } }
-  @media screen and (min-width: 95rem) {
-    .header-section {
-      height: auto; } }
+  height: auto; }
 
 .name-img {
   width: 55%;
@@ -469,12 +465,9 @@ nav div {
 
 nav img {
   height: 6rem;
-  width: 8rem;
+  width: 6rem;
   opacity: 0.7;
-  margin: 0.5rem 0 0 0.5rem;
-  background: #FFEFCE;
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
-  padding: 0.2rem; }
+  margin: 0.5rem 0 0 0.5rem; }
   @media screen and (max-width: 87.5rem) {
     nav img {
       height: 5rem;
