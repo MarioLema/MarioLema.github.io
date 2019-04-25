@@ -17,29 +17,39 @@
   max-width: 85rem;
   margin: auto;
   display: inherit;
-  min-height: 49rem;
   overflow: hidden;
+
+  @include responsive(tv){
+    min-height: 49rem;
+  }
 
   @include responsive(desktop) {
     min-height: 43rem;
+    max-height: 57rem;
   }
 
   @include responsive(large) {
     min-height: 36rem;
+    max-height: 51rem;
   }
 
   @include responsive(medium) {
     min-height: 27rem;
+    max-height: 44rem;
   }
 
   @include responsive(small) {
     min-height: 20rem;
+      max-height: 36rem;
   }
 
   @include responsive(xtrasmall) {
     min-height: 13rem;
+    max-height: 29rem;
   }
 }
+
+
 
 #rectangle-container {
   fill: none;

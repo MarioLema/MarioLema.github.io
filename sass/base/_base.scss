@@ -18,17 +18,21 @@ body {
 	opacity: 0;
 	width: 100vw;
 	height: 100vh;
-	background: url(../images/page-bg-white.png);
+	background-image: url(../images/page-bg-white.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	animation-name: appear;
 	animation-duration: 3000ms;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
+
+	@include responsive(small){
+		background-image: url(../images/page-bg-white-sm.png);
+	}
 }
 
 @keyframes appear {
 	100% {
-		opacity: 0.1;
+		opacity: 0.2;
 	}
 }
